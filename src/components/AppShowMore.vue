@@ -56,21 +56,6 @@ export default {
           descr: "lorem ipsum set dolore",
           show: false,
         },
-        {
-          title: "title - 5",
-          descr: "lorem ipsum set dolore",
-          show: false,
-        },
-        {
-          title: "title - 6",
-          descr: "lorem ipsum set dolore",
-          show: false,
-        },
-        {
-          title: "title - 7",
-          descr: "lorem ipsum set dolore",
-          show: false,
-        },
       ],
     };
   },
@@ -82,12 +67,6 @@ export default {
   computed: {
     showContent() {
       const showItems = this.items.slice(0, this.showCount);
-
-      const newShowItems = showItems.map((i) => {
-        return i;
-      });
-      console.log(newShowItems);
-
       showItems.forEach((i) => (i.show = true));
 
       if (this.items.length === showItems.length) {
